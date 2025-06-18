@@ -2,18 +2,60 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url=https://designbytriggs.etsy.com">
+  <meta http-equiv="refresh" content="1; url=https://designbytriggs.etsy.com">
   <title>Redirecting...</title>
-  <!-- Load Roboto font from Google Fonts -->
+  <!-- Load Roboto font -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
   <style>
     body {
+      margin: 0;
+      background-color: #F4442E;
       font-family: 'Roboto', sans-serif;
       font-weight: 700;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: white;
+      text-align: center;
+    }
+
+    .spinner {
+      width: 60px;
+      height: 60px;
+      border: 6px solid #fff;
+      border-top: 6px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin-bottom: 30px;
+    }
+
+    @keyframes spin {
+      0%   { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .redirecting {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .fallback {
+      font-size: 1rem;
+    }
+
+    .fallback a {
+      color: white;
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <p>If you are not redirected automatically, <a href="https://designbytriggs.etsy.com">click here</a>.</p>
+  <div class="spinner"></div>
+  <div class="redirecting">Redirecting...</div>
+  <div class="fallback">
+    If this page doesn't automatically load, <a href="https://designbytriggs.etsy.com">click here</a>.
+  </div>
 </body>
 </html>
